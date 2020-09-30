@@ -1,10 +1,8 @@
 const form = document.querySelector('form');
 const name = document.getElementById('name');
-const message = document.getElementById('message');
 const rating = document.querySelector('#rating');
+const message = document.getElementById('message');
 
-const time = new Date().toLocaleTimeString();
-const date = new Date().toLocaleDateString();
 const button = document.querySelector('button');
 const div = document.querySelector('.review-content');
 
@@ -35,9 +33,7 @@ form.addEventListener('submit', e => {
 
 function createCard(cardObj) {
 
-    // todo: fixa så att tiden verkligen stämmer överrens med tiden då vi skapade kortet
-
-    let { name, message, date, time, timeMsg, rating } = cardObj;
+    let { name, timeMsg, time, date, message, rating } = cardObj;
 
     let div = document.createElement('div');
     div.classList.add('card');
@@ -95,7 +91,7 @@ function setErrorFor(input, message) {
 function setSuccessFor(input) {
     const formControl = input.parentElement;
 
-    //add success class
+    // add success class
     formControl.className = 'form-control success';
 }
 
@@ -107,7 +103,7 @@ function setNormalFor(input) {
 }
 
 function addReview() {
-    // let cardObject = { name: name.value, message: message.value, date, time, timeMsg: 'just now' }
-    div.appendChild(createCard({ name: name.value, message: message.value, date, time, timeMsg: 'just now', rating: rating.value })).scrollIntoView();
+
+    div.appendChild(createCard({ name: name.value, message: message.value, date: new Date().toLocaleDateString(), time: new Date().toLocaleTimeString(), timeMsg: 'just now', rating: rating.value })).scrollIntoView();
 
 }
