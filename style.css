@@ -1,0 +1,311 @@
+:root {
+    --main-dark: #16001E;
+    --main: #7F2982;
+    --second: #9CFFFA;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Montserrat', sans-serif;
+    scroll-behavior: smooth;
+}
+
+body {
+    overflow-x: hidden;
+    background-color: var(--main);
+}
+
+header {
+    width: 100vw;
+    height: 20vh;
+    color: #fff;
+    background-color: var(--main-dark);
+}
+
+nav {
+    width: 80vw;
+    height: 20vh;
+    margin: auto;
+    background-color: var(--main-dark);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 2.5rem;
+    text-transform: uppercase;
+}
+
+section {
+    width: 100vw;
+    height: 80vh;
+    background-color:var(--main);
+    color: #fff;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+
+.form-header {
+    background-color: #252525;
+    width: 50vw;
+    height: 10vh;
+    border-radius: 1rem 1rem 0 0;
+    font-size: 2rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+#form {
+    height: 80vh;
+    width: 50vw;
+    background-color: var(--main);
+    display: flex;
+    flex-direction: column;
+}
+
+/* Form Control */
+
+.form-control {
+    padding: 2rem;
+    position: relative;
+}
+
+.form-control label {
+    display: inline-block;
+    margin-bottom: 0.5rem;
+}
+
+.form-control input {
+    display: block;
+    width: 100%;
+    border-radius: 0.5rem;
+    font-size: 1rem;
+    padding: 0.8rem;
+    border: 2px solid #f0f0f0;
+    margin-bottom: 0.5rem;
+}
+
+.form-control i {
+    position: absolute;
+    top: 75px;
+    right: 50px;
+    visibility: hidden;
+}
+
+.form-control p {
+    visibility: hidden;
+    color: #e74c3c;
+}
+
+.form-control textarea {
+    display: block;
+    width: 100%;
+    padding: 1rem;
+    font-size: 1rem;
+    border-radius: 0.5rem;
+    margin-bottom: 0.5rem;
+    resize: vertical;
+    border: 2px solid #f0f0f0;
+}
+
+.form-control.success input {
+    border-color:#2ecc71;
+}
+
+.form-control.error input {
+    border-color: #e74c3c;
+}
+
+.form-control.success #rating {
+    border-color:#2ecc71;
+}
+
+.form-control.error #rating {
+    border-color: #e74c3c;
+}
+
+.form-control.success textarea {
+    border-color:#2ecc71;
+}
+
+.form-control.error textarea {
+    border-color: #e74c3c;
+}
+
+.form-control.success i.fa-check {
+    color: #2ecc71;
+    visibility: visible;
+}
+
+.form-control.error i.fa-times {
+    color: #e74c3c;
+    visibility: visible;
+}
+
+.form-control.error p {
+    visibility: visible;
+    color: #e74c3c;
+}
+
+#rating {
+    display: block;
+    width: 100%;
+    padding: 0.8rem;
+    font-size: 1rem;
+    border-radius: 0.5rem;
+    margin-bottom: 0.5rem;
+    font-family: 'Roboto', sans-serif;
+    border: 2px solid #f0f0f0;
+}
+
+button {
+    background-color: #F80759;
+    border: none;
+    color: #fff;
+    padding: 1rem;
+    margin: 2rem;
+    border-radius: 0.5rem;
+    font-size: 1rem;
+}
+
+/* Tool tip - https://www.w3schools.com/howto/howto_css_tooltip.asp */ 
+
+.tooltip {
+  position: relative;
+  display: inline-block;
+  color: #F80759;
+}
+
+.tooltip .tooltiptext {
+  visibility: hidden;
+  width: 120px;
+  background-color: #555;
+  color: #fff;
+  text-align: center;
+  border-radius: 6px;
+  padding: 5px 0;
+  position: absolute;
+  z-index: 1;
+  bottom: 125%;
+  left: 50%;
+  margin-left: -60px;
+  opacity: 0;
+  transition: opacity 0.3s;
+}
+
+.tooltip .tooltiptext::after {
+  content: "";
+  position: absolute;
+  top: 100%;
+  left: 50%;
+  margin-left: -5px;
+  border-width: 5px;
+  border-style: solid;
+  border-color: #555 transparent transparent transparent;
+}
+
+.tooltip:hover .tooltiptext {
+  visibility: visible;
+  opacity: 1;
+}
+
+::placeholder {
+    color:#CDCDCD;
+}
+
+.visible {
+    visibility: visible;
+}
+
+
+/* Review Section */
+
+@media only screen and (max-width: 846px) {
+  .title {
+    font-size: 2rem;
+  }
+}
+
+@media only screen and (max-width: 450px) {
+  .title {
+    font-size: 1rem;
+  }
+
+  .review-title {
+    font-size: 2.5rem;
+  }
+}
+
+@media only screen and (max-width: 375px) {
+  .row {
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 1rem;
+    }
+}
+
+.reviews {
+    width: 100vw;
+    height: 80vh;
+    background-color: var(--main);
+}
+
+.review-content {
+    width: 80vw;
+    height: 80vh;
+    margin: auto;
+    background-color: var(--main);
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+}
+
+.card {
+    width: 100%;
+    height: 25vh;
+    margin: 2rem 0 0 0;
+    padding: 2rem;
+    background-color: #fff;
+    color: #000;
+    overflow: auto;
+}
+
+.row {
+    display: flex;
+    flex-direction: row;
+    margin-bottom: 1rem;
+}
+
+#review-name {
+    font-size: 2rem;
+    margin-bottom: 0.5rem;
+}
+
+#review-timemsg {
+    font-weight: 300;
+    margin-bottom: 0.5rem;
+}
+
+i {
+    margin-right: 0.5rem;
+}
+
+#review-time {
+    font-size: 1rem;
+    margin-right: 2rem;
+}
+
+#review-date {
+    font-size: 1rem;
+}
+
+#review-message {
+    margin-bottom: 0.5rem;
+}
+
+.card:last-child {
+    margin-bottom: 2rem;
+}

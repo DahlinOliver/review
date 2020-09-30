@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <script src="form.js" defer></script>
+    <link rel="stylesheet"
+        href="https://cdn.jsdelivr.net/npm/@shoelace-style/shoelace@2.0.0-beta.19/dist/shoelace/shoelace.css">
+    <script type="module"
+        src="https://cdn.jsdelivr.net/npm/@shoelace-style/shoelace@2.0.0-beta.19/dist/shoelace/shoelace.esm.js"></script>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Montserrat:wght@100;200;300;400;500;600;700;800;900&display=swap"
+        rel="stylesheet">
+    <script src="https://kit.fontawesome.com/770ab067e3.js" crossorigin="anonymous"></script>
+    <title>Guestbook</title>
+</head>
+
+<body>
+    <header>
+        <nav>
+            <h1 class="title">Leave your review</h1>
+        </nav>
+    </header>
+    <section>
+        <form id="form" action="#">
+            <div class="form-control">
+                <label>Name</label>
+                <div class="tooltip">*
+                    <span class="tooltiptext">Obligatory</span>
+                </div>
+                <input type="text" placeholder="Enter your name" id="name">
+                <i id="check" class="fas fa-check"></i>
+                <i id="times" class="fas fa-times"></i>
+                <p id="error-msg">Error</p>
+            </div>
+
+            <div class="form-control">
+                <label>Rating</label>
+                <div class="tooltip">*
+                    <span class="tooltiptext">Obligatory</span>
+                </div>
+                <select id="rating" name="rating">
+                    <option value="" selected disabled hidden>Choose here</option>
+                    <option value="1">1 Star</option>
+                    <option value="2">2 Stars</option>
+                    <option value="3">3 Stars</option>
+                    <option value="4">4 Stars</option>
+                    <option value="5">5 Stars</option>
+                </select>
+                <i id="check" class="fas fa-check"></i>
+                <i id="times" class="fas fa-times"></i>
+                <p id="error-msg">Error</p>
+            </div>
+
+            <div class="form-control">
+                <label>Message</label>
+                <div class="tooltip">*
+                    <span class="tooltiptext">Obligatory</span>
+                </div>
+                <textarea id="message" name="message" placeholder="Enter your message here..."></textarea>
+                <i id="check" class="fas fa-check"></i>
+                <i id="times" class="fas fa-times"></i>
+                <p id="error-msg">Error</p>
+            </div>
+
+            <button>Submit</button>
+        </form>
+    </section>
+
+    <header>
+        <nav>
+            <h1 class="review-title">Reviews</h1>
+        </nav>
+    </header>
+    <section class="reviews">
+        <div class="review-content">
+
+        </div>
+    </section>
+</body>
+
+</html>
